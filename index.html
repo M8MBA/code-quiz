@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Code Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
-  
-  </link>
+  <title>Code Quiz</title>
 </head>
 
 <body>
   <header>
     <nav>
       <h1>
-        <!-- add highscores.html -->
-        <a class="high-scores" href="#">View high scores</a>
+        <a class="high-scores" href="./highscores.html">View high scores</a>
       </h1>
     </nav>
 
-    <span id="time" class="countdown">Time: </span>
+    <span id="time">Time: </span>
 
   </header>
 
-  <div>
-    <h2>Code Quiz Challenge</h2>
-    <p>
-      Try to answer the following code-related questions within the time limit.
-      Keep in mind that the incorrect answers will penalize your score/time by ten seconds!
-    </p>
-    <button id="start" >Start Quiz</button>
+  <div class="wrapper">
+    <div id="start-screen" class="start">
+      <h2>Code Quiz Challenge</h2>
+      <p>
+        Try to answer the following code-related questions within the time limit.
+        Keep in mind that the incorrect answers will penalize your score/time by ten seconds!
+      </p>
+      <button id="start">Start Quiz</button>
+    </div>
+
+    <div id="questions" class="hide">
+      <p id="question-title"></p>
+      <div id="choices" class="choices"></div>
+    </div>
+
+    <div id="end-screen" class="hide">
+      <h3>All done!</h3>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>
+        Enter initials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
+
+    <div id="feedback" class="feedback hide"></div>
   </div>
 
   <footer>
+    <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
   </footer>
 
 </body>  
 
 </html>
+
