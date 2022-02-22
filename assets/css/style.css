@@ -26,7 +26,7 @@
 
 h2 {
   padding: 10px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 p, h3 {
@@ -87,6 +87,8 @@ input[type="text"] {
 }
 
 ol {
+  font-size: large;
+  padding: 10px;
   padding-left: 0;
   max-height: 400px;
   overflow: auto;
