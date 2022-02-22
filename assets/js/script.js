@@ -18,7 +18,7 @@ function startQuiz() {
   // un-hide questions section
   questionsEl.removeAttribute("class");
 
-  // start timer
+  // start timer at 75 sec
   timerId = setInterval(clockTick, 1000);
 
   // show starting time
@@ -58,7 +58,7 @@ function getQuestion() {
 function questionClick() {
   // check if user guessed wrong
   if (this.value !== questions[currentQuestionIndex].answer) {
-    // penalize time
+    // penalize time 10 seconds
     time -= 10;
 
     if (time < 0) {
@@ -135,7 +135,7 @@ function saveHighscore() {
     // save to localstorage
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
-    // redirect to next page
+    // redirect to highscores
     window.location.href = "highscores.html";
   }
 }
