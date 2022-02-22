@@ -15,7 +15,7 @@ Build a timed coding quiz with multiple-choice questions. This app will run in t
 * JS
 
 ## Website
-
+https://m8mba.github.io/code-quiz/
 
 ## Contribution
 Cade Wilson
