@@ -5,28 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/highscores-styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Highscores</title>
 </head>
 
-<!-- Beginning of body tag. -->
-
 <body>
 
-  <!-- Anchor tag. -->
-  <a href="index.html">Back to the Code Quiz</a>
-  <!-- Created two id in he div. -->
-  <div id="high-score">High Scores</div>
-  <div id="score-card">
-    <!-- AN unordered list with a id. -->
-    <ul id="unordered-list"></ul>
-    <!-- Ending div tag. -->
+  <div class="wrapper">
+    <h1>Highscores</h1>
+    <ol id="highscores"></ol>
+
+    <a href="./index.html"><button>Go Back</button></a>
+    <button id="clear">Clear Highscores</button>
   </div>
 
-  <!-- Linking the javascript. -->
-  <script src="scores.js"></script>
+  <footer>
+    <script src="./assets/js/highscores.js"></script>
+  </footer>
 
-  <!-- Closing body tag. -->
 </body>
 
 </html>

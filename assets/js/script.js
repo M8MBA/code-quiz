@@ -1,5 +1,5 @@
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = 75;
 var timerId;
 
 var questionsEl = document.querySelector("#questions");
@@ -39,7 +39,7 @@ function getQuestion() {
   choicesEl.innerHTML = "";
 
   // loop over choices
-  currentQuestion.choices.forEach(function(choice, i) {
+  currentQuestion.choices.forEach(function (choice, i) {
     // create new button for each choice
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -66,19 +66,19 @@ function questionClick() {
     }
     // display new time on page
     timerEl.textContent = time;
-    feedbackEl.textContent = "Wrong!";
-    feedbackEl.style.color = "red";
-    feedbackEl.style.fontSize = "400%";
+    feedBackEl.textContent = "Wrong!";
+    feedBackEl.style.color = "gray";
+    feedBackEl.style.fontSize = "300%";
   } else {
-    feedbackEl.textContent = "Correct!";
-    feedbackEl.style.color = "green";
-    feedbackEl.style.fontSize = "400%";
+    feedBackEl.textContent = "Correct!";
+    feedBackEl.style.color = "gray";
+    feedBackEl.style.fontSize = "300%";
   }
 
   // flash right/wrong feedback
-  feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function() {
-    feedbackEl.setAttribute("class", "feedback hide");
+  feedBackEl.setAttribute("class", "feedback");
+  setTimeout(function () {
+    feedBackEl.setAttribute("class", "feedback hide");
   }, 1000);
 
   // next question
@@ -136,7 +136,7 @@ function saveHighscore() {
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
     // redirect to next page
-    window.location.href = "score.html";
+    window.location.href = "highscores.html";
   }
 }
 
